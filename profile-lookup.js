@@ -1,4 +1,3 @@
-// Setup
 const contacts = [
     {
         firstName: "Akira",
@@ -26,18 +25,23 @@ const contacts = [
     },
 ];
 
+// function that takes name and a property (prop) as arguments
 function lookUpProfile(name, prop) {
-    // Only change code below this line
     for (let i = 0; i < contacts.length; i++) {
-        if (name === contacts[i].firstName && contacts[i].hasOwnProperty(prop) === true) {
-            return contacts[i][prop];
-        } else if (name !== contacts[i].firstName) {
-            return "No such contact";
-        } else if (prop !== contacts[i][prop]) {
-            return "No such property";
+        // check if name is an actual contact's firstName
+        if (name === contacts[i].firstName) {
+            // check if the given property (prop) is a property of that contact
+            if (contacts[i].hasOwnProperty(prop)) {
+                // if both are true, return the "value" of that property
+                return contacts[i][prop];
+            } else if (prop !== contacts[i][prop]) {
+                // if prop does not correspond to any valid properties of a contact found to match name
+                return "No such property";
+            }
         }
     }
-    // Only change code above this line
+    // if name does not correspond to any contacts
+    return "No such contact";
 }
 
 lookUpProfile("Akira", "likes");

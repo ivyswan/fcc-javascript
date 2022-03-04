@@ -57,3 +57,17 @@ function countdown(n) {
         return countArray;
     }
 }
+
+// **** Use Recursion to Create a Range of Numbers ****
+function rangeOfNumbers(startNum, endNum) {
+    if (startNum === endNum) {
+        return [startNum];
+    } else {
+        let countArray = rangeOfNumbers(startNum, endNum - 1);
+        countArray.push(endNum);
+        return countArray;
+    }
+};
+
+// rangeOfNumbers(1, 5) should return [1, 2, 3, 4, 5]
+// rangeOfNumbers(4, 4) should return [4]

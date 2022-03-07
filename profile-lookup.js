@@ -43,5 +43,3 @@ function lookUpProfile(name, prop) {
     // if name does not correspond to any contacts
     return "No such contact";
 }
-
-lookUpProfile("Akira", "likes");

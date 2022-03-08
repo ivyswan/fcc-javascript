@@ -6,6 +6,7 @@ const age = user.age;
 const { name, age } = user;
 
 
+// * * * * * * * * * * //
 const HIGH_TEMPERATURES = {
     yesterday: 75,
     today: 77,
@@ -13,8 +14,15 @@ const HIGH_TEMPERATURES = {
 };
 // const today = HIGH_TEMPERATURES.today;
 // const tomorrow = HIGH_TEMPERATURES.tomorrow;
+
+// Destructuring Assignment to Extract Values from Objects
 const { today, tomorrow } = HIGH_TEMPERATURES;
 
+// Destructuring Assignment to Assign Variables from Objects
+const { today: highToday, tomorrow: highTomorrow } = HIGH_TEMPERATURES;
+
+
+// * * * * * * * * * * //
 // Destructuring Assignment to Assign Variables from Nested Objects
 const LOCAL_FORECAST = {
     yesterday: { low: 61, high: 75 },

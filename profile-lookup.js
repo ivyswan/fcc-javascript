@@ -28,6 +28,7 @@ const contacts = [
 // function that takes name and a property (prop) as arguments
 function lookUpProfile(name, prop) {
     for (let i = 0; i < contacts.length; i++) {
+        console.log(contacts[i]);
         // check if name is an actual contact's firstName
         if (name === contacts[i].firstName) {
             // check if the given property (prop) is a property of that contact
